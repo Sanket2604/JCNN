@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap');
+
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+.cont1{
+    min-height: 100vh;
+    background-image: url(../images/home/Background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 5vw; 
+}
+.head .logo{
+    height: 100px;
+    width: 340px;
+    background-image: url(../images/navlogdark.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.head p{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 32px;
+}
+.home{
+    width: 100%;
+    
+    padding: 80px 5vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr; 
+    grid-gap: 50px;  
+}
+.home .sec5{
+    grid-column: 1 / span 2;
+    width: 50%;
+    position: relative;
+    right: -25%;
+}
+.home .sec{
+    height: 150px;
+    position: relative;
+
+
+    padding: 10px 20px;
+
+    color: white;
+    border: 5px solid white;
+    border-radius: 7px;
+
+    font-family: 'Source Sans Pro', sans-serif;
+
+    transition: border 0.25s ease-in-out;
+}
+
+.home .sec:hover{
+    border: 5px solid rgba(255, 255, 255, 0);
+}
+
+.home .sec .cardheading{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 40px;
+    opacity: 1;
+
+    transition: 0.5s ease-in-out;
+}
+
+.home .sec:hover .img{
+    z-index: 1;
+    opacity: 1;
+    transform: scale(1.05);
+}
+.home .sec:hover .cardheading{
+    z-index: 0;
+    opacity: 0;
+}
+
+.home .sec .img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    opacity: 0;
+    border-radius: 7px;
+    overflow: hidden;
+
+    transition: 0.5s ease-in-out;
+}
+.home .sec1 .img{
+    background-image: url(../images/home/aboutus.jpg);
+}
+.home .sec2 .img{
+    background-image: url(../images/home/Career.jpg);
+}
+.home .sec3 .img{
+    background-image: url(../images/home/Team.jpg);
+}
+.home .sec4 .img{
+    background-image: url(../images/home/event.jpg);
+}
+.home .sec5 .img{
+    background-image: url(../images/home/contact.jpg);
+}
+.home .sec .img .cont{
+    height: 100%;
+    padding: 10px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+.home .sec .img .cont .heading{
+    font-size: 24px;
+    font-weight: 600;
+}
+.home .sec .img .cont .heading .line{
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.6s;
+}
+.home .sec:hover .img .cont .heading .line{
+    width: 100%;
+}
+.home .sec .img .cont .content{
+    font-size: 18px;
+    text-align: center;
+}
+.home .sec:hover .img .cont .content i{
+    font-size: 18px;
+    animation: arrow 2s linear 0.6s infinite normal both;
+}   
+
+@keyframes arrow {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+    .head{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .head .logo{
+        height: 80px;
+        width: 300px;
+    }
+    .head p{
+        font-size: 28px;
+    }    
+    .home{
+        padding: 40px 5vw;
+        grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr; 
+        grid-gap: 20px;  
+    }
+    .home .sec5{
+        grid-column: 1 / span 1;
+        width: 100%;
+        position: relative;
+        right: 0;
+    }
+    .home .sec:hover .img{
+        z-index: 0;
+        opacity: 0;
+        transform: scale(1);
+    }
+    .home .sec:hover .cardheading{
+        z-index: 1;
+        opacity: 1;
+    }
+    .home .sec:hover{
+        border: 5px solid rgb(255, 255, 255);
+    }
+    .home .sec{
+        height: 100px;
+    }
+    .home .sec .cardheading{
+        font-size: 28px;
+    }
+    .home .sec .img .cont .heading{
+        font-size: 20px;
+    }
+    .home .sec .img .cont .content{
+        font-size: 16px;
+    }
+}

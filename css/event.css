@@ -1,0 +1,214 @@
+.cont1{
+    height: 250px;
+
+    background-image: url(../images/events/cont1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.cont1 .head{
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cont2{
+    padding: 0px 10vw;
+    background-color: rgb(209, 242, 255);
+    overflow: hidden;
+}
+.cont2 .field{
+    position: relative;
+    margin-top: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.cont2 .field:last-child{
+    margin-bottom: 80px;
+}
+.cont2 .norm .t{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+}
+.cont2 .norm .b{
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.cont2 .revr .t{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(100% 100%, 0 0, 100% 0);
+
+}
+.cont2 .revr .b{
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    height: 50px;
+    width: 50px;
+    clip-path: polygon(100% 100%, 0 0, 0 100%);
+}
+.cont2 .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont2 .image .background{
+    background-color: black;
+    height: 300px;
+    width: 100%;
+}
+.cont2 .image .background .img{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    height: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cont2 .d-flex .image .background .img{
+    position: relative;
+    top: -20px;
+    left: -20px;
+    height: inherit;
+}
+.cont2 .image .bg1,
+.cont2 .field .t1,
+.cont2 .field .b1{
+    background-color: #ff6111;
+}
+.cont2 .image .background .img1{
+    background-image: url(../images/events/event1.jpg);
+}
+.cont2 .image .bg2,
+.cont2 .field .t2,
+.cont2 .field .b2{
+    background-color: #f53163;
+}
+.cont2 .image .background .img2{
+    background-image: url(../images/events/event2.jpg);
+}
+.cont2 .image .bg3,
+.cont2 .field .t3,
+.cont2 .field .b3{
+    background-color: #be03fd;
+}
+.cont2 .image .background .img3{
+    background-image: url(../images/events/event3.jpg);
+}
+.cont2 .image .bg4,
+.cont2 .field .t4,
+.cont2 .field .b4{
+    background-color: #00ff00;
+}
+.cont2 .image .background .img4{
+    background-image: url(../images/events/event4.jpg);
+}
+.cont2 .content{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+.cont2 .d-flex .content{
+    padding-left: 0;
+    padding-right: 30px;
+}
+.cont2 .content .heading{
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cont2 .content .detail{
+    font-size: 16px;
+    text-align: justify;
+}
+
+@media only screen and (max-width:992px){
+    
+    .cont2 .field{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .cont1 .head{
+        font-size: 34px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    
+    .cont1 .head{
+        font-size: 28px;
+    }
+    .cont2 .content{
+        padding-top: 50px;
+        padding-left: 0px;
+    }
+    .cont2 .d-flex .content{
+        padding-right: 0px;
+        padding-top: 30px;
+    }
+
+}
+@media only screen and (max-width:450px){
+    
+    .cont1 .head{
+        font-size: 24px;
+    }
+    .cont2{
+        padding: 0px 5vw;
+    }
+    .cont2 .field{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .cont2 .image .background{
+        height: 200px;
+        width: 100%;
+    }
+    .cont2 .image .background .img{
+        top: 10px;
+        left: 10px;
+    }
+    .cont2 .d-flex .image .background .img{
+        top: -10px;
+        left: -10px;
+    }
+    .cont2 .content{
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+    .cont2 .d-flex .content{
+        padding-right: 0px;
+        padding-top: 20px;
+    }
+    .cont2 .content .heading{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .cont2 .content .detail{
+        font-size: 14px;
+        text-align: justify;
+    }   
+}
