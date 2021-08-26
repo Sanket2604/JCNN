@@ -1,6 +1,53 @@
+.phn_modal .modal-header{
+    border: none;
+    background-color: transparent !important;
+}
+.phn_modal .modal-content{
+    margin-top: 100px;
+}
+.phn_modal .modal-body{
+    position: relative;
+    padding: 0;
+    padding-top: 10px;
+}
+.phn_modal .modal-body .phn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    overflow: hidden;
+}
+.phn_modal .modal-body .phn .line{
+    height: 2px;
+    width: 100%;
+    background-color: #087dc0;
+    margin-top: 10px;
+    transform: translateX(-120%);
+    transition: 1s ease-in-out;
+}
+.phn_modal .modal-body .phn:hover .line{
+    transform: translateX(0%);
+}
+.phn_modal .modal-body .phn span{
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.phn_modal .modal-body .close_{
+    position: absolute;
+    right: 0;
+    top: 0;
+    outline: none;
+    transform: translateY(-30px);
+    font-size: 20px;
+    color: white;
+}
+
 .footer{
     position: relative;
-    background-color: #1f2833;
+    background-color: #002e4d;
     padding: 50px 5vw;
     padding-bottom: 30px;
     color: rgb(231, 231, 231);
@@ -8,11 +55,11 @@
 }
 .footer a:hover{
     color: white;
+    cursor: pointer;
 }
 .footer:hover{
-    background-color: #152130;
+    background-color: #003858;
 }
-
 .footer .section1{
     display: flex;
     justify-content: center;

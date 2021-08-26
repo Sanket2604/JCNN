@@ -19,41 +19,45 @@
 .head{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 20px 5vw; 
 }
 .head .logo{
-    height: 100px;
-    width: 340px;
+    height: 150px;
+    width: 400px;
     background-image: url(../images/navlogdark.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-.head p{
-    color: white;
+.head .p{
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 32px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.head .p span{
+    font-size: 26px;
+    font-weight: 700;
 }
 .home{
     width: 100%;
-    
-    padding: 80px 5vw;
+    padding: 30px 5vw;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template: 1fr 1fr 1fr / 1fr 1fr; 
-    grid-gap: 50px;  
+    grid-gap: 40px;  
 }
-.home .sec5{
+/* .home .sec5{
     grid-column: 1 / span 2;
     width: 50%;
     position: relative;
     right: -25%;
-}
+} */
 .home .sec{
-    height: 150px;
+    height: 140px;
     position: relative;
 
 
@@ -86,7 +90,7 @@
 
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     opacity: 1;
 
     transition: 0.5s ease-in-out;
@@ -193,11 +197,15 @@
         height: 80px;
         width: 300px;
     }
-    .head p{
-        font-size: 28px;
-    }    
+    .head .p{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .head .p span{
+        font-size: 18px;
+    }
     .home{
-        padding: 40px 5vw;
+        padding: 10px 5vw;
         grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr; 
         grid-gap: 20px;  
     }
@@ -230,5 +238,11 @@
     }
     .home .sec .img .cont .content{
         font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .home .sec .img{
+        display: none;
     }
 }

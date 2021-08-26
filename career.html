@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </a>
-            <a class="navele" href="team.html">Our Team
+            <a class="navele" href="services.html">Services
                 <div class="line">
                     <div class="section1">
                         <div class="line1"></div>
@@ -44,6 +44,16 @@
                     </div>
                 </div>
             </a>
+            <!-- <a class="navele" href="team.html">Our Team
+                <div class="line">
+                    <div class="section1">
+                        <div class="line1"></div>
+                    </div>
+                    <div class="section2">
+                        <div class="line2"></div>
+                    </div>
+                </div>
+            </a> -->
             <a class="navele act" href="career.html">Career
                 <div class="line">
                     <div class="section1">
@@ -54,7 +64,7 @@
                     </div>
                 </div>
             </a>
-            <a class="navele" href="events.html">Events
+            <!-- <a class="navele" href="events.html">Events
                 <div class="line">
                     <div class="section1">
                         <div class="line1"></div>
@@ -63,7 +73,7 @@
                         <div class="line2"></div>
                     </div>
                 </div>
-            </a>
+            </a> -->
             <a href="contact.html" class="button">CONTACT US</a>  
         </div>
         <div class="menu-btn" style="transition: all .5s ease-in-out;" onclick="toggleSideBar()">
@@ -76,9 +86,10 @@
             <div class="listele" onclick="sideBarClose()">Close<i class="fas fa-times fa-lg"></i></div>
             <a class="listele" href="index.html">Home</a>
             <a class="listele" href="aboutus.html">About Us</a>
+            <a class="listele" href="services.html">Services</a>
+            <!-- <a class="listele" href="team.html">Our Team</a> -->
             <a class="listele" href="#">Career</a>
-            <a class="listele" href="team.html">Our Team</a>
-            <a class="listele" href="event.html">Event</a>
+            <!-- <a class="listele" href="events.html">Event</a> -->
             <a class="listele" href="contact.html">
                 <div class="button_cont">
                     CONTACT US
@@ -101,10 +112,15 @@
                 </button>
                 </div>
                 <div class="modal-body">
+                    <div class="thankyou">We will get in touch with you soon.</div>
+                    <div class="error">
+                        <div class="img"></div>
+                        <div class="text">There is an Unexpected Error.<br>Please refresh the page. </div>
+                    </div>
                     <div class="form_cont">
                         <div class="name">
                             <div class="form">
-                                <input style="color:black" type="text" class="inp" name="name" autocomplete="off" required />
+                                <input style="color:black" type="text" class="inp" id="n" name="name" autocomplete="off" required />
                                 <label for="name" class="label-name">
                                     <span class="content-name">Full Name<span style="color: red;">*</span></span>
                                 </label>                           
@@ -112,7 +128,7 @@
                         </div>
                         <div class="email">
                             <div class="form">
-                                <input style="color:black" type="text" class="inp" name="name" autocomplete="off" required />
+                                <input style="color:black" type="text" class="inp" id="e" name="name" autocomplete="off" required />
                                 <label for="name" class="label-name">
                                     <span class="content-name">Email<span style="color: red;">*</span></span>
                                 </label>                           
@@ -120,7 +136,13 @@
                         </div>
                         <div class="phone">
                             <div class="form">
-                                <input style="color:black" type="number" class="inp" name="name" autocomplete="off" required />
+                                <input style="color:black" type="number" id="cno" name="number" autocomplete="off" required />
+                                <label for="name" class="label-name">
+                                    <span class="content-name">Country Code<span style="color: red;">*</span></span>
+                                </label>                           
+                            </div>
+                            <div class="form">
+                                <input style="color:black" type="number" id="pno" name="number" autocomplete="off" required />
                                 <label for="name" class="label-name">
                                     <span class="content-name">Phone Number<span style="color: red;">*</span></span>
                                 </label>                           
@@ -128,7 +150,7 @@
                         </div>
                         <div class="job">
                             <div class="form">
-                                <input style="color:black" type="text" class="inp" name="name" autocomplete="off" required />
+                                <input style="color:black" type="text" class="inp" id="j" name="name" autocomplete="off" required />
                                 <label for="name" class="label-name">
                                     <span class="content-name">Job Position<span style="color: red;">*</span></span>
                                 </label>                           
@@ -136,12 +158,13 @@
                         </div>
                         <div class="option">
                             <label for="myfile">Upload your Resume:</label>
-                            <input type="file" id="myfile" name="myfile"> 
+                            <input type="file" id="fileupload" accept=".pdf"> 
                         </div>
+                        
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="submit_cont">
+                    <button class="submit_cont" onclick="submit()">
                         Submit
                     </button>
                 </div>
@@ -160,356 +183,464 @@
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="jcard card1">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                        <div class="heading">ASSISTANT GENERAL MANAGER</div>
+                        <div class="company">HIGH RISE CONSTRUCTION</div>
                         <div class="list">
-                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="ele exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="ele money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>20 - 24 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 40,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">First class degree holders in Civil Engineering, with 20 - 24 years of building construction experience and including 12+ years in the Arabian Gulf, in a similar position or as senior Projects Manager...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job1.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
                         </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card2">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">SENIOR PROJECT MANAGERS</div>
+                        <div class="company">CIVIL – HIGH RISE CONSTRUCTION</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>20 - 24 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 35,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">He will be responsible for managing multiple building construction projects simultaneously. Well experienced in independently handling high quality, fast track, high-rise buildings, 5 Star Hotels..... <br/><span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job2.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card3">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card4">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card5">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card6">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card7">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card8">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card9">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
+                                View
                             </a>
                         </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card10">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">DISTRIBUTION MANAGER FOR GCC & AFRICA</div>
+                        <div class="company">FMCG / COSMETICS / PERFUMES</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>15 - 18 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 13,000 - 15,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Graduate with Business Management in Sales & Marketing, 15-18 years of experience in Retail Sales / Distribution preferably in professionally managed organizations within the UAE or GCC / Africa region in FMCG & Cosmetics industry..... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job3.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
-                        </div>
+                        </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card11">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">ARAB LEASING MANAGER - GCC REGION</div>
+                        <div class="company">REAL ESTATE INDUSTRY</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>8 - 10 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 8,000 - 12,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Graduate in any discipline, 8-10 years experience in property and Mall outlets and good relationships with domestic retail leasing companies. He will be responsible to negotiate with the Leasing Agent/Mall Managements........ <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job4.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-lg-6">
-                    <div class="jcard card12">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
-                        <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
-                        </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
-                        <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                <span class="s"></span>
-                                Apply
-                            </a>
-                        </div>
+                        </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card13">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">RETAIL SALES CONSULTANTS</div>
+                        <div class="company">EUROPEAN / FASHION RETAIL OUTLET</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>5 - 6 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 5,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Graduate with 5-6 years UAE experience in the Retail Industry handling sales of apparel & accessories. He/ She should have excellent customer service skills and good exposure to visual merchandising..... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job5.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
-                        </div>
+                        </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card14">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">INSURANCE CO-ORDINATOR</div>
+                        <div class="company">DIAGNOSTIC CENTER</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>2 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 5,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Graduate with minimum 2+ years experience and ability to liaison and network end to end insurance proceedings in a timely manner. Our client would strictly look for someone with knowledge of medical terms and insurance practices...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job6.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
-                        </div>
+                        </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card15">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">AREA SALES MANAGER</div>
+                        <div class="company">PERFUMES INDUSTRY</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>SAUDI ARABIA</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>10 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>SAR 13, 000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Our Client, an established player in perfume industry is looking for an Area Sales Manager for Saudi Operations. Ideally the candidate should be a Graduate or Masters in Marketing with minimum of 10+ years...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job7.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
-                        </div>
+                        </div>            
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <div class="jcard card16">
-                        <div class="heading">Senior Analyst-Audit</div>
-                        <div class="company">Accenture</div>
+                    <div class="jcard card1">
+                        <div class="heading">THERMAL DESIGN ENGINEER</div>
+                        <div class="company">HEAT TRANSFER INDUSTRY</div>
                         <div class="list">
-                            <div class="loc"><i class="fas fa-map-marker-alt"></i>Mumbai</div>
-                            <div class="exp"><i class="fas fa-business-time"></i>6-8 yrs</div>
-                            <div class="money"><i class="fas fa-rupee-sign"></i>4,00,000-5,00,000</div>
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>10 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 12,000</div>
                         </div>
-                        <div class="desc">Accenture is a global professional services company with leading capabilities in digital, cloud and security. Combining unmatched experience and specialized skills</div>
-                        <div class="skills"><b>Skills:</b> Software Engineering</div>
+                        <div class="desc">Our Client pioneers in design and manufacturing industrial and automotive thermal products is seeking to recruit Thermal Design Engineer for their Dubai operations. Graduate in Thermal Heat Engineering with minimum of 10 years experience...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
                         <div class="buttoncontainer">
-                            <a class="ab" style = "text-decoration: none;" href="#" data-toggle="modal" data-target="#exampleModalLong">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job8.html">
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
                                 <span class="s"></span>
-                                Apply
+                                View
                             </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">EUROPEAN SALES EXECUTIVES</div>
+                        <div class="company">FASHION RETAIL OUTLET</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>5 - 6 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 6000</div>
                         </div>
+                        <div class="desc">Graduate with 5-6 years UAE experience in the Retail Industry handling sales of apparel & accessories. He/She should have excellent customer service skills and good exposure to visual merchandising....... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job9.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">BUSINESS DEVELOPMENT EXECUTIVE</div>
+                        <div class="company">FACILITIES MANAGEMENT</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>4 - 5 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 8,000</div>
+                        </div>
+                        <div class="desc">Our Client, is an established player in the Building Maintenance/Facilities Management industry is looking for a dynamic Marketing Executive. The ideal candidate must have a minimum of 4-5 years of experience in a similar industry with good contacts in the local market...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job10.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">ARAB LEASING SUPERVISOR</div>
+                        <div class="company">REAL ESTATE & PROPERTY DEVELOPMENT</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i> - </div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 10,000</div>
+                        </div>
+                        <div class="desc">Our Client in pioneers in the Real Estate Management in the UAE is seeking to recruit leasing professionals for their Dubai operations. Client provides real estate management and is also acting as a broker....... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job11.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">SENIOR PROJECT MANAGERS</div>
+                        <div class="company">CIVIL – HIGH RISE CONSTRUCTION</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>20 - 24 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 35,000</div>
+                        </div>
+                        <div class="desc">He will be responsible for managing multiple building construction projects simultaneously. Well experienced in independently handling high quality, fast track, high-rise buildings, 5 Star Hotels..... <br/><span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job12.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">SENIOR PLANNING ENGINEERS</div>
+                        <div class="company">CIVIL – HIGH RISE CONSTRUCTION</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>5 - 8 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 16,000</div>
+                        </div>
+                        <div class="desc">Graduate in Civil Engineering preferably with PG qualifications and having 5-8 years experience including 4 years in the Gulf region in preparing/monitoring Program in P6 /P8 with resource and cost loading...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job13.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">GROUP FINANCIAL CONTROLLER</div>
+                        <div class="company">REAL ESTATE & PROPERTY DEVELOPMENT</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>8 - 10 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 45,000</div>
+                        </div>
+                        <div class="desc">CA, having worked as a Financial Controller or Vice President Finance and possessing extensive experience in consolidation of reports in the IFRS/IAS. Worked with any listed Company/PJSC and experience in working with group finance team is highly desirable like Big 4 IAS........ <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job14.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">COST ACCOUNTANT</div>
+                        <div class="company">CONSTRUCTION & CONTRACTING</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>2 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 15,000</div>
+                        </div>
+                        <div class="desc">Our prestigious Client is seeking specifically a Cost Accountant with high commercial acumen and strong financial fundamentals. 27-32 years, preferably ICWA / CA, having a strong flair for costing and analysis..... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job15.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">INTERNAL AUDITOR</div>
+                        <div class="company">CEMENT INDUSTRY</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Sharjah, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>2 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 10,000</div>
+                        </div>
+                        <div class="desc">Our client is looking for a ACCA / CA / CIA with minimum 3 to 5 years of working experience in internal audit ( UAE & GCC countries preferred). Experience in Internal Audit in a Big  4 audit firms, concrete ready mix or manufacturing industry is desirable....... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job16.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">PROJECT ACCOUNTANT</div>
+                        <div class="company">REAL ESTATE</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>10 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 8,000 - 9,000</div>
+                        </div>
+                        <div class="desc">M.Com / B.Com with 5-6 years experience in the construction industry and having excellent knowledge of project accounting and complete understanding of construction accounting process. He will report directly to the Head of Finance...... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job17.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">SENIOR ACCOUNTANT</div>
+                        <div class="company">SERVICE INDUSTRY</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>5 - 6 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 8,000</div>
+                        </div>
+                        <div class="desc">Bachelors in Accountancy with minimum 5-6 years UAE experience in the Accounting department of a large company or service industry. He will have to be conceptually strong and have handled accounts upto finalization....... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job18.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">CASHIER</div>
+                        <div class="company">HEAVY EQUIPMENT</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>3 - 5 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>DHS 4,000</div>
+                        </div>
+                        <div class="desc">Bachelors in Accountancy with minimum 3-5 years UAE experience in the Accounting department of a large company as a cashier. He will have to be conceptually strong and have handled physical cash of large amounts........ <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job19.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">DIRECTOR</div>
+                        <div class="company">REAL ESTATE BROKERAGE FIRM</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i> - </div>
+                            <div class="ele money"><i class="fas fa-coins"></i>Based on Experience</div>
+                        </div>
+                        <div class="desc">Our Client, a reputed real estate brokerage firm in Dubai is looking for an individual who will be the key negotiator with Developers, responsible for recruiting staff and managing the company....... <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job20.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">SALES ENGINEER</div>
+                        <div class="company">SOLAR ENERGY SOLUTIONS</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>5 - 8 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 8,000</div>
+                        </div>
+                        <div class="desc">Candidate will be dealing with Contractors and Consultants.  Graduate or Post Graduate in Electrical / Mechanical Engineering with minimum 5-8 years of experience in Sales of Metal Grating / Pumps........ <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job21.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="jcard card1">
+                        <div class="heading">PROJECT CO-ORDINATOR - MEP</div>
+                        <div class="company">SOLAR ENERGY SOLUTIONS</div>
+                        <div class="list">
+                            <div class="ele loc"><i class="fas fa-map-marker-alt"></i>QATAR \ Dubai, UAE</div>
+                            <div class="ele exp"><i class="fas fa-business-time"></i>4 - 5 yrs</div>
+                            <div class="ele money"><i class="fas fa-coins"></i>AED 12, 000</div>
+                        </div>
+                        <div class="desc">Our Client, a market leader in Solar Energy Solutions is looking for Graduate or Post Graduate in Electrical / Mechanical Engineering with minimum 8-10 years of experience in Projects related to Boilers, Pumps and Water Heaters........ <span>Read More <i class="fas fa-angle-double-right"></i></span></div>
+                        <div class="buttoncontainer">
+                            <a class="ab" style = "text-decoration: none;" href="career_details/job22.html">
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                <span class="s"></span>
+                                View
+                            </a>
+                        </div>            
                     </div>
                 </div>
             </div>
@@ -554,6 +685,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/career.js" type="text/javascript"></script>
     <script src="js/nav.js" type="text/javascript"></script>
 </body>
