@@ -246,3 +246,23 @@
         display: none;
     }
 }
+
+@media only screen and (max-width: 500px){
+    
+    
+    .head .logo{
+        height: 50px;
+        width: 400px;
+    }
+    .head .p{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .head .p span{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .home .sec{
+        border: 2px solid white;
+    }
+}

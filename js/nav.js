@@ -35,7 +35,5 @@ function sideBarClose(){
     document.querySelector('.backdrop').classList.remove('back');
 }
 document.querySelector('.backdrop').addEventListener('click', () => {
-    document.querySelector('.sidebar').classList.remove('slide');
-    document.querySelector('.menu-btn').classList.remove('open');
-    document.querySelector('.backdrop').classList.remove('back');
+    sideBarClose()
 });

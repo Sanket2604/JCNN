@@ -84,7 +84,7 @@
     <div class="backdrop"></div>
     <div class="sidebar">
         <div class="list">
-            <div class="listele" onclick="sideBarClose()">Close<i class="fas fa-times fa-lg"></i></div>
+            
             <a class="listele" href="../index.html">Home</a>
             <a class="listele" href="../aboutus.html">About Us</a>
             <a class="listele" href="../services.html">Services</a>
@@ -159,14 +159,13 @@
                         </div>
                         <div class="option">
                             <label for="myfile">Upload your Resume:</label>
-                            <input type="file" id="fileupload" accept=".pdf"> 
+                            <input type="file" id="fileupload" accept=".pdf" onchange="submit()"> 
                         </div>
-                        
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="submit_cont" onclick="submit()">
-                        Submit
+                    <button class="submit_cont" onclick="reveal()">
+                        Upload Resume
                     </button>
                 </div>
             </div>
@@ -208,37 +207,63 @@
         </div>
     </div>
     
-    <div class="container-fluid footer">
-        <div class="row row1">
-            <div class="col-12 col-md-5 col-lg-3 section section1">
-                <div class="img"></div>
-            </div>
-            <div class="col-12 col-md-7 col-lg-5 mt-5 mt-md-0 section section2">
-                <div class="box">
-                    <a href="" target="_blank" class="address">
-                        <i class="fas fa-building "></i>
-                        <span></span>
-                    </a>
-                    <a href="mailto: " target="_blank" class="email"><i class="fas fa-at "></i><span></span></a>
-                    <a href="tel:" class="phone"><i class="fas fa-phone-alt "></i><span></span></a>
-                    <div class="social-icons_footer">
-                        <a class="wht" target="_blank" href=""><i class="fab fa-whatsapp"></i></a>
-                        <a class="fac" target="_blank" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="yt" target="_blank" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="linked" target="_blank" href=""> <i class="fab fa-linkedin-in"></i></a>
+    <div class="phn_modal modal fade" id="phnnum" tabindex="-1" role="dialog" aria-labelledby="phnnumLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close_" data-dismiss="modal" aria-label="Close">
+                        <i class="far fa-times-circle"></i>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-12 col-lg-4 mt-5 mt-lg-0 section section3">
-                <div class="heading">Location:</div>
-                <div class="loc_box">
-                    <iframe src="" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <a class="phn phn1" href="tel: +918951053492">
+                        <div><span>India:</span>+91 89510 53492</div>
+                        <div class="line"></div>
+                    </a>
+                    <a class="phn" href="tel:+971523299120">
+                        <div><span>UAE:</span>+971 523299120</div>
+                        <div class="line"></div>
+                    </a>
+                    <a class="phn" href="tel:+971508473766">
+                        <div><span>UAE:</span>+971 508473766</div>
+                        <div class="line"></div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="row row2">
-            <div class="col-12">
-                <div class="company_line">JCNN Executives © 2021 Copyright,<span class="mob"><br></span> All Rights Reserved <span class="mob tab"><br></span> <hide>|</hide> Powered by company name</div>
+    </div>
+
+    <div class="footer">
+        <div class="container-fluid" style="max-width: 1800px;">
+            <div class="row row1">
+                <div class="col-12 col-md-4 col-lg-2 section section1">
+                    <div class="img"></div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-6 mt-5 mt-md-0 section section2">
+                    <div class="box">
+                        <a href="https://www.google.com/maps/place/Alpha+Emerald/@13.0581743,77.6453443,17z/data=!3m1!4b1!4m5!3m4!1s0x3bae17567a01a12d:0x956a1b1ffb811494!8m2!3d13.0581735!4d77.6475331" target="_blank" class="address">
+                            <i class="fas fa-building "></i>
+                            <span>#219, ALPHA EMERALD APARTMENTS, KOTHANUR, BANGALORE - 560 077</span>
+                        </a>
+                        <a href="mailto:info@jcnnexecutives.com" target="_blank" class="email"><i class="fas fa-at "></i><span>info@jcnnexecutives.com</span></a>
+                        <a data-toggle="modal" data-target="#phnnum" class="phone"><i class="fas fa-phone-alt "></i><span>+91 8951053492 / +971 508473766 / +971 508473766</span></a>
+                        <div class="social-icons_footer">
+                            <a class="wht" target="_blank" href="https://wa.me/971523299120"><i class="fab fa-whatsapp"></i></a>
+                            <a class="fac" target="_blank" href="https://www.facebook.com/profile.php?id=100072024070411"><i class="fab fa-facebook-f"></i></a>
+                            <a class="yt" target="_blank" href="https://www.youtube.com/channel/UCNuylqLUCnY8U4QOoN_v-Dw"><i class="fab fa-youtube"></i></a>
+                            <a class="linked" target="_blank" href="https://www.linkedin.com/in/jcnn-executives-a0183921a/"> <i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4 mt-5 mt-lg-0 section section3">
+                    <div class="heading">Location:</div>
+                    <div class="loc_box">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6462562457514!2d77.64534431482289!3d13.058174290799144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17567a01a12d%3A0x956a1b1ffb811494!2sAlpha%20Emerald!5e0!3m2!1sen!2sin!4v1630043194301!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="col-12">
+                    <div class="company_line"><div>JCNN Executives © 2021 Copyright</div><div>All Rights Reserved</div></div>
+                </div>
             </div>
         </div>
     </div>

@@ -211,7 +211,7 @@ a:hover{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 60, 129, 0.3);
     opacity: 0;
     z-index: -1;
     transition: opacity 0.75s ease-in-out;
@@ -225,12 +225,13 @@ a:hover{
     width: 440px;
     opacity: 0;
     height: 100%;
-    background-color: rgba(70, 70, 70, 0.8);
+    background-color: rgba(0, 60, 129, 0.8);
     z-index: 5;
     color: white;
     left: -460px;
     transition: 0.75s ease-in-out;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .sidebar.slide{
     left: 0;
@@ -245,7 +246,9 @@ a:hover{
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 1px;
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
+    margin-left: 8px;
+    text-align: center;
 }
 .sidebar .list a.listele{
     width: 100%;
@@ -254,14 +257,6 @@ a:hover{
 }
 .sidebar .list a.listele:hover{
     color: white;
-}
-.sidebar .list .listele:first-child{
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(49, 49, 49, 0.8);
-    font-size: 24px;
 }
 .sidebar .list .listele:last-child{
     border: none;

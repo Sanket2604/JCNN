@@ -9,7 +9,7 @@ function submit(){
 
     if( cname !== '' && email !== '' && text!== '' && phone !== ''){
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)){
-            if(phone.match(/^\d{10}$/)){
+            if(phone.match(/^\d{10}$/) || phone.match(/^\d{9}$/)){
                 Email.send({
                     Host: "smtp.gmail.com",
                     Username : "jcnnwebsite@gmail.com",

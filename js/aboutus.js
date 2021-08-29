@@ -3,7 +3,7 @@
         trigger:".cont1",
         start:"top 50%",
     }})
-    .from('.he1', { scale: 0, opacity: 0, ease: 'circ', delay: 2})
+    .from('.he1', { scale: 0, opacity: 0, ease: 'circ', delay: 1})
     .from('.s1', { y:'+50%', opacity: 0 , ease: 'power'})
     .from('.s2', { x:'-50%', opacity: 0 , ease: 'power'})
 
@@ -20,7 +20,7 @@
         trigger:".cont4",
         start:"top 50%",
     }})
-    .from('.he2', { scale: 0, opacity: 0, ease: 'circ'})
+    .from('.he2', { scale: 0, opacity: 0, ease: 'circ', delay: 1})
     .from('.grid_ele', { opacity: 0, ease: 'power3', stagger: 0.5})
 
     let t4 = gsap.timeline({scrollTrigger:{

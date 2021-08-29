@@ -213,7 +213,7 @@ a:hover{
     position: fixed;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 60, 129, 0.3);
     opacity: 0;
     z-index: -1;
     transition: opacity 0.75s ease-in-out;
@@ -227,12 +227,13 @@ a:hover{
     width: 440px;
     opacity: 0;
     height: 100%;
-    background-color: rgba(70, 70, 70, 0.8);
+    background-color: rgba(0, 60, 129, 0.8);
     z-index: 5;
     color: white;
     left: -460px;
     transition: 0.75s ease-in-out;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .sidebar.slide{
     left: 0;
@@ -247,7 +248,9 @@ a:hover{
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 1px;
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
+    margin-left: 8px;
+    text-align: center;
 }
 .sidebar .list a.listele{
     width: 100%;
@@ -256,14 +259,6 @@ a:hover{
 }
 .sidebar .list a.listele:hover{
     color: white;
-}
-.sidebar .list .listele:first-child{
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(49, 49, 49, 0.8);
-    font-size: 24px;
 }
 .sidebar .list .listele:last-child{
     border: none;
@@ -401,6 +396,7 @@ a:hover{
 }
 .contact_cont{
     padding: 20px 5vw 50px 5vw;
+    max-width: 1800px;
 }
 .contact_cont .section1{
     position: relative;
@@ -588,7 +584,7 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     border-left: 2px solid rgb(163, 163, 163);
-    padding-left: 50px;
+    padding-left: 40px;
     padding-bottom: 40px;
 }
 
@@ -597,18 +593,20 @@ a:hover{
     font-weight: 600;
 }
 .contact_cont .section2 .contact_us .reach{
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 17px;
+    margin-top: 25px;
     cursor: pointer;
+    display: flex;
+
 }
 .contact_cont .section2 .contact_us .reach.user{
     font-size: 20px;
     font-weight: 500;
 }
 
-.contact_cont .section2 .contact_us span{
+.contact_cont .section2 .contact_us i{
     margin-right: 10px;
-    font-size: 24px;
+    font-size: 22px;
 }
 .phn_modal .modal-header{
     border: none;
@@ -867,7 +865,7 @@ a:hover{
 
     .contact_cont .section2{
         border-left: none;
-        padding-left: 0px;
+        padding-left: 20px;
     }
     .contact_cont .section2 .section2_cont{
         display: flex;
@@ -909,6 +907,9 @@ a:hover{
     .form_cont .option{
         display: none;
     }
+    .form_cont .submit{
+        align-self: center;
+    }
     .form_cont textarea{
         font-size: 16px;
     }
@@ -925,7 +926,7 @@ a:hover{
     .contact_cont .section2 .contact_us .reach{
         font-size: 16px;
     }
-    .contact_cont .section2 .contact_us span{
+    .contact_cont .section2 .contact_us i{
         font-size: 18px;
     }
     
