@@ -43,21 +43,21 @@
 }
 .home{
     width: 100%;
-    padding: 30px 5vw;
+    padding: 10px 5vw;
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template: 1fr 1fr 1fr / 1fr 1fr; 
     grid-gap: 40px;  
 }
-/* .home .sec5{
+.home .sec5{
     grid-column: 1 / span 2;
     width: 50%;
     position: relative;
     right: -25%;
-} */
+}
 .home .sec{
-    height: 140px;
+    height: 130px;
     position: relative;
 
 
@@ -113,6 +113,8 @@
     left: 0;
     right: 0;
     z-index: 0;
+    height: 140px;
+
 
     background-position: center;
     background-repeat: no-repeat;

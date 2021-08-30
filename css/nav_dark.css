@@ -26,7 +26,7 @@ input::-webkit-inner-spin-button {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(315deg, #00c8ff, #00ff55);
-}  
+}   
 a{
     color: inherit;
 }
@@ -48,7 +48,7 @@ a:hover{
 }
 .nav .logo{    
     margin-left: 3vw;
-    background-image: url(../images/navloglight.png);
+    background-image: url(../images/navlogdark.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -71,7 +71,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: white;
+    color: black;
     font-weight: 600;
 }
 .navitems a{
@@ -86,7 +86,7 @@ a:hover{
     color: black;
 }
 .navitems a:hover{
-    color: white;
+    color: black;
 }
 .navitems a.act{
     color: #44d6cc;
@@ -109,9 +109,6 @@ a:hover{
 .button:hover{
     background-color: #00a39b;
 }
-.button.active{
-    background-color: #00a39b;
-}
 
 .navitems a .line{
     width: 90%;
@@ -126,13 +123,13 @@ a:hover{
     width: 50%;
 }
 .navitems a .line .section1 .line1{
-    background-color: white;
+    background-color: black;
     height: 2px;
     width: 0%;
     transition: 0.5s ease-in-out;
 }
 .navitems a .line .section2 .line2{
-    background-color: white;
+    background-color: black;
     height: 2px;
     width: 0%;
     transition: 0.5s ease-in-out;
@@ -172,7 +169,7 @@ a:hover{
 .menu-btn_burger {
     width: 30px;
     height: 4px;
-    background: white;
+    background: rgb(0, 7, 66);
     border-radius: 5px;
     transition: all .5 ease-in-out;
     cursor: pointer;
@@ -183,7 +180,7 @@ a:hover{
     position: absolute;
     width: 30px;
     height: 4px;
-    background: white;
+    background: rgb(0, 7, 66);
     border-radius: 5px;
     transition: all .5s ease-in-out;
 }
@@ -286,7 +283,7 @@ a:hover{
     align-items: center;
     font-size: 24px;
     color: white;
-    background-color: rgba(0, 150, 219, 0.9);
+    background-color: rgb(0, 175, 175);
     border-radius: 50px;
     transform: translateY(20px);
     opacity: 0;
@@ -298,7 +295,7 @@ a:hover{
     transform: translateY(0px);
 } 
 .gototop:hover a{
-    background-color: rgba(0, 103, 151, 0.9);
+    background-color: rgba(45, 45, 45, 0.9);
 }
 
 @media only screen and (max-width: 1184px) {
@@ -383,3 +380,4 @@ a:hover{
         padding: 10px;
     }
 }
+
