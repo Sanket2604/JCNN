@@ -1,11 +1,17 @@
-let t3 = gsap.timeline({scrollTrigger:{
+let t1 = gsap.timeline({scrollTrigger:{
     trigger:".cont1",
     start:"top 60%",
     duration: 0.5
 }})
 .from('.heading', { x: '-50%', opacity: 0, ease: 'sine'})
-.from('.listele', { x: '-50px', opacity: 0, ease: 'sine'})
-.from('.list', { y: '50px', opacity: 0, ease: 'sine'})
+.from('.list', { y: '50px', opacity: 0, ease: 'sine', stagger: 0.25, delay:0})
+
+let t2 = gsap.timeline({scrollTrigger:{
+    trigger:".cont1",
+    start:"top 60%",
+    duration: 0.5
+}})
+.from('.listele', { x: '-50px', opacity: 0, ease: 'sine', stagger: 0.25})
 .from('.btn_cont', { y: '50px', opacity: 0, ease: 'sine'})
 
 function reveal(){
