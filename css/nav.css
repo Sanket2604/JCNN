@@ -73,6 +73,7 @@ a:hover{
     justify-content: space-around;
     color: white;
     font-weight: 600;
+    max-width: 1000px;
 }
 .navitems a{
     height: 100%;
@@ -102,17 +103,13 @@ a:hover{
     margin-right: 20px;
     padding: 10px 20px;
     border-radius: 40px;
-    background-color: #44d6cc;
+    background-color: #00a2d3;
     transition: 0.5s ease-in-out;
     color: white!important;
 }
 .button:hover{
-    background-color: #00a39b;
+    background-color: #00569c;
 }
-.button.active{
-    background-color: #00a39b;
-}
-
 .navitems a .line{
     width: 90%;
     display: flex;
