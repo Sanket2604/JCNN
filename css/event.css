@@ -196,6 +196,10 @@
         transform: translateX(0px);
         opacity: 1;
     }
+    .cont2 .field:hover{
+        transform: scale(1)!important;
+        box-shadow: none;
+    }
 }
 
 @media only screen and (max-width:992px){
@@ -220,7 +224,7 @@
         font-size: 28px;
     }
     .cont2 .content{
-        padding-top: 50px;
+        padding-top: 80px;
         padding-left: 0px;
     }
     .cont2 > .d-flex .content{
@@ -259,12 +263,12 @@
         left: -10px;
     }
     .cont2 .content{
-        padding-top: 40px;
+        padding-top: 60px;
         padding-left: 0px;
     }
     .cont2 .d-flex .content{
         padding-right: 0px;
-        padding-top: 20px;
+        padding-top: 30px;
     }
     .cont2 .content .heading{
         font-size: 18px;

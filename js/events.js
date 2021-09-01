@@ -8,7 +8,7 @@ let tl = gsap.timeline({scrollTrigger:{
 
 let t2 = gsap.timeline({scrollTrigger:{
     trigger:".bg2",
-    start:"top 60%",
+    start:"top 80%",
 }})
 .from('.r2', { scale: 0 , opacity: 0, ease: 'power1', duration: 1})
 .from('.bg2', { rotateZ: "+30deg" , opacity: 0, ease: 'power1', duration: 1})
@@ -16,7 +16,7 @@ let t2 = gsap.timeline({scrollTrigger:{
 
 let t3 = gsap.timeline({scrollTrigger:{
     trigger:".bg3",
-    start:"top 60%",
+    start:"top 80%",
 }})
 .from('.r3', { scale: 0 , opacity: 0, ease: 'power1', duration: 1})
 .from('.bg3', { rotateZ: "-30deg" , opacity: 0, ease: 'power1', duration: 1})
@@ -24,7 +24,7 @@ let t3 = gsap.timeline({scrollTrigger:{
 
 let t4 = gsap.timeline({scrollTrigger:{
     trigger:".bg4",
-    start:"top 60%",
+    start:"top 80%",
 }})
 .from('.r4', { scale: 0 , opacity: 0, ease: 'power1', duration: 1})
 .from('.bg4', { rotateZ: "+30deg" , opacity: 0, ease: 'power1', duration: 1})
