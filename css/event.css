@@ -18,7 +18,7 @@
 }
 
 .cont2{
-    padding: 0px 10vw;
+    padding: 0px 5vw;
     background-color: rgb(209, 242, 255);
     overflow: hidden;
 }
@@ -29,6 +29,11 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s ease-in-out;
+}
+.cont2 .field:hover{
+    transform: scale(1.01)!important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .cont2 .field:last-child{
     margin-bottom: 80px;
@@ -109,7 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 40px;
     width: 50px;
     transform: translateX(20px);
     opacity: 0;
@@ -162,14 +167,14 @@
     background-color: #00ff00;
 }
 .cont2 .content{
-    margin-left: 30px;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: fit-content;
 }
-.cont2 .d-flex .content{
+.cont2 > .d-flex .content{
     padding-left: 0;
     padding-right: 30px;
 }
@@ -184,6 +189,15 @@
     text-align: justify;
 }
 
+@media only screen and (max-width:1025px){
+    
+    .cont2 .image .background .img .carousel .prev_arrow,
+    .cont2 .image .background .img .carousel .next_arrow{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 @media only screen and (max-width:992px){
     
     .cont2 .field{
@@ -192,6 +206,11 @@
     }
     .cont1 .head{
         font-size: 34px;
+    }
+    .cont2 .image .background .img .carousel .prev_arrow,
+    .cont2 .image .background .img .carousel .next_arrow{
+        transform: translateX(0px);
+        opacity: 1;
     }
 }
 
@@ -204,17 +223,16 @@
         padding-top: 50px;
         padding-left: 0px;
     }
-    .cont2 .d-flex .content{
+    .cont2 > .d-flex .content{
         padding-right: 0px;
-        padding-top: 30px;
+        padding-top: 50px;
     }
-    .cont2 .image .background .img .carousel .prev_arrow,
-    .cont2 .image .background .img .carousel .next_arrow{
-        transform: translateX(0px);
-        opacity: 1;
-
+    .cont2 .content .heading{
+        font-size: 20px;
     }
-
+    .cont2 .content .detail{
+        font-size: 16px;
+    }
 }
 @media only screen and (max-width:450px){
     
@@ -249,7 +267,7 @@
         padding-top: 20px;
     }
     .cont2 .content .heading{
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 10px;
     }
     .cont2 .content .detail{
