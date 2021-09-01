@@ -23,6 +23,7 @@
     overflow: hidden;
 }
 .cont2 .field{
+    max-width: 1250px;
     position: relative;
     margin-top: 80px;
     padding-top: 50px;
@@ -90,40 +91,78 @@
     left: -20px;
     height: inherit;
 }
+.cont2 .image .background .img .carousel,
+.cont2 .image .background .img .carousel .carousel-inner,
+.cont2 .image .background .img .carousel .carousel-inner .carousel-item,
+.cont2 .image .background .img .carousel .carousel-inner .carousel-item img{
+    height: inherit;
+    position: relative;
+}
+.cont2 .image .background .img img{
+    object-fit: cover;
+}
+.cont2 .image .background .img .carousel .prev_arrow,
+.cont2 .image .background .img .carousel .next_arrow{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    width: 50px;
+    transform: translateX(20px);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.cont2 .image .background .img .carousel:hover .prev_arrow,
+.cont2 .image .background .img .carousel:hover .next_arrow{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.cont2 .image .background .img .carousel .next_arrow{
+    right: 0;
+    transform: translateX(-20px);
+}
+.cont2 .image .bg1 .prev_arrow,
+.cont2 .image .bg1 .next_arrow{
+    color: #ff6111;
+}
 .cont2 .image .bg1,
 .cont2 .field .t1,
 .cont2 .field .b1{
     background-color: #ff6111;
 }
-.cont2 .image .background .img1{
-    background-image: url(../images/events/event1.jpg);
+.cont2 .image .bg2 .prev_arrow,
+.cont2 .image .bg2 .next_arrow{
+    color: #f53163;
 }
 .cont2 .image .bg2,
 .cont2 .field .t2,
 .cont2 .field .b2{
     background-color: #f53163;
 }
-.cont2 .image .background .img2{
-    background-image: url(../images/events/event2.jpg);
+.cont2 .image .bg3 .prev_arrow,
+.cont2 .image .bg3 .next_arrow{
+    color: #be03fd;
 }
 .cont2 .image .bg3,
 .cont2 .field .t3,
 .cont2 .field .b3{
     background-color: #be03fd;
 }
-.cont2 .image .background .img3{
-    background-image: url(../images/events/event3.jpg);
+.cont2 .image .bg4 .prev_arrow,
+.cont2 .image .bg4 .next_arrow{
+    color: #00ff00;
 }
 .cont2 .image .bg4,
 .cont2 .field .t4,
 .cont2 .field .b4{
     background-color: #00ff00;
 }
-.cont2 .image .background .img4{
-    background-image: url(../images/events/event4.jpg);
-}
 .cont2 .content{
-    padding-left: 30px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -168,6 +207,12 @@
     .cont2 .d-flex .content{
         padding-right: 0px;
         padding-top: 30px;
+    }
+    .cont2 .image .background .img .carousel .prev_arrow,
+    .cont2 .image .background .img .carousel .next_arrow{
+        transform: translateX(0px);
+        opacity: 1;
+
     }
 
 }

@@ -1,4 +1,4 @@
-//email:jcnnexecs@gmail.com   pass:noelnavneethfelix 
+//email:jcnnexecs@gmail.com   pass:noelnavneethfelix
 //linkedin: pass: JCNNExec12$#@!
 function submit(){
     const cname = document.getElementById('n').value
