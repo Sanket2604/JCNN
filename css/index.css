@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;900&display=swap');
 
-
 ::-webkit-scrollbar {
     width: 0px;
 }
@@ -11,6 +10,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont1 .cont{
+    width: 100%;
+    max-width: 2000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -113,7 +119,7 @@
     left: 0;
     right: 0;
     z-index: 0;
-    height: 140px;
+    height: 120px;
 
 
     background-position: center;
@@ -251,20 +257,28 @@
 
 @media only screen and (max-width: 500px){
     
-    
+    .home{
+        padding: 10px 5vw;
+        grid-template: 60px 60px 60px 60px 60px / 1fr; 
+        grid-gap: 20px;  
+    }
     .head .logo{
         height: 50px;
         width: 400px;
     }
+    .home .sec{
+        height: 60px;
+        border: 3px solid white;
+    }
     .head .p{
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
     }
     .head .p span{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
     }
-    .home .sec{
-        border: 2px solid white;
+    .home .sec .cardheading{
+        font-size: 18px;
     }
 }

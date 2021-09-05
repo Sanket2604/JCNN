@@ -43,8 +43,20 @@
     transform: translateY(-30px);
     font-size: 20px;
     color: white;
+    cursor: pointer;
 }
 
+.phn_modal.whtsapp .modal-body .phn i{
+    margin-right: 20px;
+    background-color: #25D366;
+    border-radius: 100%;
+    padding: 8px 9px;
+    font-size: 18px;
+    color: white;
+}
+.phn_modal.whtsapp .modal-body .phn .line{
+    background-color: #25D366;
+}
 .footer{
     position: relative;
     background-color: #002e4d;
@@ -163,7 +175,9 @@
 }
 @media only screen and (max-width:991px){
 
-
+    .phn_modal .modal-body .phn .line{
+        transform: translateX(0%);
+    }
     .social-icons_footer{
         display: flex;
         justify-content: center;
