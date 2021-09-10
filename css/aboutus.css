@@ -44,14 +44,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px 30px;
-    height: 300px;
+    min-height: 300px;
     width: 33%;
     border-radius: 20px;
     color: white;
     cursor: default;
+    padding-top: 50px;
     transition: 0.5s ease-in-out;
+}
+.cont2 .sec1 .box:last-child{
+    margin-right: 0;
 }
 .cont2 .sec1 .box .heading{
     font-size: 24px;
