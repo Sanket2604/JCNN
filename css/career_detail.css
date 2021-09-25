@@ -265,7 +265,49 @@
 .cont1 .content_cont .content .listele i{
     margin-top: 6px;
     margin-right: 5px;
-    color: hsl(219, 100%, 30%);;
+    color: hsl(219, 100%, 30%);
+}
+.cont1 .content_cont .content .listele .email{
+    position: relative;
+    background: #2C3E50;
+    background: -webkit-linear-gradient(left, #FF0000, green, #4169E1, #Ff0490, #bf00ff, #551a8b);
+    background: linear-gradient(left, #FF0000, green, #4169E1, #Ff0490, #bf00ff, #551a8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 1000%;
+    animation: color 15s ease-in-out infinite alternate;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+    width: fit-content;
+    padding-bottom: 4px;
+    overflow: hidden!important;
+    padding-bottom: 4px;
+}
+.cont1 .content_cont .content .listele .email .line{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: -webkit-linear-gradient(45deg, #FF0000, green, #4169E1, #Ff0490, #bf00ff, #551a8b);
+    background: linear-gradient(45deg, #FF0000, green, #4169E1, #Ff0490, #bf00ff, #551a8b);
+    background-size: 1000%;
+    width: 0;
+    transition: 0.5s ease-in-out;
+    animation: color 15s ease-in-out infinite alternate;
+}
+.cont1 .content_cont .content .listele .email:hover .line{
+    width: 100%;
+}
+@keyframes color {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
 .cont1 .content_cont .btn_cont{
     margin-top: 60px;

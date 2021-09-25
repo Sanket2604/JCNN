@@ -1,5 +1,3 @@
-//email:jcnnexecs@gmail.com   pass:noelnavneethfelix
-//linkedin: pass: JCNNExec12$#@!
 function submit(){
     const cname = document.getElementById('n').value
     const email = document.getElementById('e').value
